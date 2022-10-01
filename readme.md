@@ -14,8 +14,7 @@
 <h3>Prototype image of each project</h3>
 
 | [<img src="https://drive.google.com/uc?id=1tB8PEz5MNLPAD1ZRXBih9Uulm3NZhD2x" width=115><br><sub>AppMeuPerfil</sub>](https://github.com/JeremiasAlgonz) |  [<img src="https://drive.google.com/uc?id=1pO6wux78L1ZgmLL80YYFpv8jD7GYMgRe" width=115><br><sub>AppContador</sub>](https://github.com/JeremiasAlgonz) |  [<img src="https://drive.google.com/uc?id=19TCUv3wuEdF7bPwm-r2d4F-QXTBD8Ccy" width=115><br><sub>AppMultiplicador</sub>](https://github.com/JeremiasAlgonz) |
-[<img src="https://drive.google.com/uc?id=1ZwtuuwnmBDXmy0NJwBNcPd7aBz4nIGyy" width=115><br><sub>AppAlcoolXGasolina</sub>](https://github.com/JeremiasAlgonz) |
-| :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: |
 
 
 <h3>Screen Capture</h3>
