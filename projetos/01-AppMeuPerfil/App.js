@@ -1,100 +1,90 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, Linking } from "react-native";
-import { View, Text, Image, SafeAreaView, ScrollView} from 'react-native';
+import { TouchableOpacity, Linking } from 'react-native';
+import { View, Text, Image, SafeAreaView, ScrollView } from 'react-native';
+import { styles } from './styles';
 
- 
-class App extends Component{
-  render(){
- 
+class App extends Component {
+  render() {
     let nome = 'Jeremias Alves Gonçalez';
     let age = '23';
-    let img = 'https://pps.whatsapp.net/v/t61.24694-24/297518891_1170926040153312_8533774299329591818_n.jpg?ccb=11-4&oh=01_AVx5MfUpROIGClbB11uut7TWzbwtS1L1ZLy8-JXVjqf5ig&oe=6326C42D';
- 
-    return(
+    let img =
+      'https://drive.google.com/uc?id=12ZwROTkxeW4jB0IrkWEvRQ3R8xeel9Jt';
+
+    return (
       <SafeAreaView>
-      <ScrollView>
-        <View style={{flex:1, backgroundColor:' #bbb9ba ', flexDirection:'collunm'}}>
-          <Image
-            source={{ uri: img }}
-            style={{ width: 200, height: 230, marginTop:50, alignSelf:'center'}}
-          />
-          <>{/* DADOS PESSOAIS*/}
-            <Text style={{ color:'#2b7d64', fontSize: 22, fontWeight:'bold', marginLeft: 30, marginTop:20}}>
-              Dados pessoais:
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}>
+          <View style={styles.container}>
+            <Image source={{ uri: img }} style={styles.profilePicture} />
+            <>
+              {/* DADOS PESSOAIS*/}
+              <Text style={styles.textTitle}>Dados pessoais:</Text>
+              <Text style={{ color: '#2b7d64', fontSize: 18, marginLeft: 50 }}>
+                {nome}
               </Text>
-            <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-              {nome}
+              <Text style={{ color: '#2b7d64', fontSize: 18, marginLeft: 50 }}>
+                Resido em Mongaguá-SP
               </Text>
-            <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-              Resido em Mongaguá-SP
+              <Text style={{ color: '#2b7d64', fontSize: 18, marginLeft: 50 }}>
+                Canceriano, {age} anos
               </Text>
-            <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-             Canceriano, {age} anos
-              </Text>
-          </>
-          <>{/* FORMAçÃO*/}
-            <Text style={{ color:'#2b7d64', fontSize: 22, fontWeight:'bold', marginLeft: 30, marginTop:20}}>
-                Formação:
-                </Text>
-              <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-                Superior Cursando(FATEC)
-                </Text>
-              <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
+            </>
+            <>
+              {/* FORMAçÃO*/}
+              <Text style={styles.textTitle}>Formação:</Text>
+              <Text style={styles.textSubtitle}>Superior Cursando(FATEC)</Text>
+              <Text style={styles.textSubtitle}>
                 Técnico em Administração(ETEC)
-                </Text>
-              <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-                Certificação C# .Net
-                </Text>         
-          </>
-          <>{/* Experiência*/}
-            <Text style={{ color:'#2b7d64', fontSize: 22, fontWeight:'bold', marginLeft: 30, marginTop:20}}>
-                Experiência:
-                </Text>
-              <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-                Ainda não atuo na área
-                </Text>
-              <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-                Só possuo experiência acadêmica
-                Buscando colocação no mercado
-                </Text>
-          </>
-          <>{/* Projetos*/}
-            <Text style={{ color:'#2b7d64', fontSize: 22, fontWeight:'bold', marginLeft: 30, marginTop:20}}>
-                Projetos:
-                </Text>
-                <TouchableOpacity onPress={() => Linking.openURL('https://hintmovie.netlify.app')}>
-                  <Text style={{ color:'blue',textDecorationLine:'underline', fontSize: 18, marginLeft: 50}}>
-                      Avaliação de Filmes (no ar)
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL('https://github.com/JeremiasAlgonz/SalesWebMvc')}>
-                  <Text style={{ color:'blue',textDecorationLine:'underline', fontSize: 18, marginLeft: 50}}>
-                      Relatório de vendas (git rep)
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL('https://github.com/JeremiasAlgonz/XadrezConsole')}>
-                  <Text style={{ color:'blue',textDecorationLine:'underline', fontSize: 18, marginLeft: 50}}>
-                      Xadrez no CMD (git rep)
-                    </Text>
-                </TouchableOpacity>
-                <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-                    Portfólio web em desenvolvimento
-                  </Text>
-                  <Text style={{ color:'#2b7d64', fontSize: 18, marginLeft: 50}}>
-                    Alguns outros em arquivos locais
-                  </Text>
-                <Text style={{ color:'#2b7d64', fontSize: 18, marginBottom: 50}}>
-                    
-
-
-                  </Text>
-          </>
-        </View>
+              </Text>
+              <Text style={styles.textSubtitle}>Certificação C# .Net</Text>
+            </>
+            <>
+              {/* Experiência*/}
+              <Text style={styles.textTitle}>Experiência:</Text>
+              <Text style={styles.textSubtitle}>Ainda não atuo na área</Text>
+              <Text style={styles.textSubtitle}>
+                Só possuo experiência acadêmica Buscando colocação no mercado
+              </Text>
+            </>
+            <>
+              {/* Projetos*/}
+              <Text style={styles.textTitle}>Projetos:</Text>
+              <TouchableOpacity
+                onPress={() =>
+                  Linking.openURL('https://hintmovie.netlify.app')
+                }>
+                <Text style={styles.link}>Avaliação de Filmes (no ar)</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() =>
+                  Linking.openURL(
+                    'https://github.com/JeremiasAlgonz/SalesWebMvc'
+                  )
+                }>
+                <Text style={styles.link}>Relatório de vendas (git rep)</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() =>
+                  Linking.openURL(
+                    'https://github.com/JeremiasAlgonz/XadrezConsole'
+                  )
+                }>
+                <Text style={styles.link}>Xadrez no CMD (git rep)</Text>
+              </TouchableOpacity>
+              <Text style={styles.textSubtitle}>
+                Portfólio web em desenvolvimento
+              </Text>
+              <Text style={styles.textSubtitle}>
+                Alguns outros em arquivos locais
+              </Text>
+              <Text style={{ marginBottom: 50 }}></Text>
+            </>
+          </View>
         </ScrollView>
-        </SafeAreaView>
-)
-}
-
+      </SafeAreaView>
+    );
+  }
 }
 
 export default App;
