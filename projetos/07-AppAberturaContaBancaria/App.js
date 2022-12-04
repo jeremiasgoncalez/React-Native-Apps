@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import react, { View, ScrollView } from 'react-native';
-import People from './src/People/index';
+import react, { ScrollView, SafeAreaView, StatusBar} from 'react-native';
+import NovaConta from './src/NovaConta/Index';
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      whatever: 0
-    };
-  }
-
+class App extends Component {
   render() {
-
     return (
       <ScrollView>
-      <View>
-        
-          <People />
-
-      </View>
+        <StatusBar
+            barStyle="light-content"
+            hidden={false}
+            backgroundColor="#55544F"
+            translucent={false}
+            networkActivityIndicatorVisible={true}
+          />
+        <NovaConta />
       </ScrollView>
     );
   }
 }
+
+export default App;
