@@ -4,11 +4,6 @@
 <p>💅 HardCoded Using React Native Framework ⚛︎ </p>
 <br>
 
-
-* [AppMeuPerfil](#01-App-Meu-Perfil)
-* [AppContador](#02-App-Contador)
-* [AppMultiplicador](#03-App-Multiplicador)
-
 <hr>
 
 <h3>Prototype image of projects</h3>
